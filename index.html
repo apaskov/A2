@@ -28,55 +28,66 @@
 
 			<h3>Overall Analysis Questions</h3>
 			<ol>
-				<li>hey vojta</li>
-				<li>QUESTION_2</li>
-				<li>QUESTION_3</li>
-				<li>...</li>
+				<li>Is the rising price of housing inflation-driven, or are there other factors at play?</li>
+				<li>Are certain regions more prone to investor activity?</li>
+				<li>How does the practice of cash purchasing affect the housing market?</li>
+				<li>How does the practice of house flipping affect the housing market?</li>
 			</ol>
 		</section>
 
 		<section>
 			<h2>Discoveries & Insights</h2>
 
-			<figure>figure >
+			<figure>
 				<img src="pic1.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					Before beginning our analysis, we explore for any data quality issues that may adversely affect analysis down the line. This chart shows the number of datapoints present for every [zip code, year] combination. Overall, we observe that there are significant number of zip codes that have very sparse data, and which is not uniformly distributed by the years (but rather, biased towards 2021-2022). Since such baises may influence transaction frequency and median analysis, all future research includes only the top 13 zip codes in the chart (that is, removing 02128 and below).
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="pic2.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					This chart illustrates the number of datapoints by type of property in our real estate transactions dataset. Since our analysis focuses on answering questions pertaining to housing, we do not want property transactions for entities such as hotels and banks. As such, all future analysis only uses the datapoints pertaining to green columns (that is: condominiums, as well as 1/2/3-family residences).
+
+					After eliminating the data quality issues, we know that our dataset is appropriately comprised property transactions for condominiums and family residences in- and around the city of Boston — as desired.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="pic3.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					Beginning our exploratory data analysis, we first investigate whether there is even an issue of rising-property prices by comparing the median inflation-adjusted prices overtime. To do so, we use the US Government’s CPI Inflation Calculator (https://www.bls.gov/data/inflation_calculator.html) to adjust all pricing data to a real-dollars in 2022. Under the null-hypothesis that inflation is the only cause of rising prices, the reference line illustrates what we should expect median transaction prices to be but observe that our assumption is clearly incorrect. As such, there are other factors putting upwards pressure on housing prices.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="pic4.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					Let's take a closer look into potential reasons for this upwards pressure — which is the focus of our analysis on why housing is becoming so unaffordable for the average Bostonian. Addressing our second question, we investigate whether certain regions more prone to investor activity. We depict a regional heat-map of the percentage of transactions that are from investors for each zip code, split between transactions froms 2000-2004 and 2018-2022. Areas such as Downtown Boston and Back Bay attract relatively more investing across both periods. And interestingly, we visually see that investors comprise an increasingly larger percentage of the market between the two time periods, indicating increased investing over the first decades of the 21st century.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="pic5.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					A natural follow-up to the trend of increased investment into the housing market is whether these investments may put upward pressure on housing prices. So, we plot a follow-up heat-map comparing the percent difference in median transaction prices between the two time periods considered previously. Now, while all areas experienced upwards pressure, we notice that there is a connection between areas that experienced a greater increase in investment, and those that experienced a greater increase in median transaction price. This suggests that investor activity may be a factor in the rising price of housing.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="pic6.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					I'm also curious if there is a particular type of property that is becoming more popular for investors. As such, we plot the number of transactions from investors between 2000-2004 and 2018-2022 for each of the four types of property in our dataset. Interestingly, we observe that investment into condominiums has been the most popular in both time periods, but that there is not a single type of property that single-handedly driving the increase in investor activity — as the increased in activity is consistent across all property types.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="pic7.png" alt="" />
+				<figcaption>
+					Now, let’s shift our focus over to the third question pertaining to cash purchasing. Specifically, a cash-sale is defined as a purchase made in cash instead of through financing, and investigating this purchasing tactic may reveal important insights into the housing trends observed so far.
+
+					
 				</figcaption>
 			</figure>
 
